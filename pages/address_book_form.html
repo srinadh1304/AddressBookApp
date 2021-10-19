@@ -12,77 +12,79 @@
 </head>
 
 <body>
-    <header class="headerContainer header">
-        <div class="logoContainer">
-            <img src="../assets/images/logo.png/logo.png" alt="">
+    <header class="header-content header">
+        <div class="logo-content">
+            <img src="../assets/images/logo.jpeg" alt="logo" />
             <div>
-                <span class="address-text">ADDRESS</span><br>
-                <span class="address-text book-text">BOOK</span>
+                <span class="addressBook-text">Address</span><br />
+                <span class="addressBook-text addressBook-book">Book</span>
             </div>
         </div>
     </header>
     <div class="form-content">
-        <form class="form" action="#" onsubmit="save(event)" onreset="resetForm()">
+        <form action="#" class="form" onreset="resetForm()" onsubmit="save()">
             <div class="form-head">
-                <div class="form-text">Person Address Form</div>
-                <div>
-                    <a href="../pages/home.html"><img class="cancel-img" src="../assets/images//cross.png/cross.png" alt=""></a>
-                </div>
+                <div class="form-head-text">Person Address Form</div>
+                <a href="../pages/address_book_home.html"><img class="form-head-image" src="../assets/images/cancelButton.jpeg" alt="logo"></a>
             </div>
-            <div class="row-content">
-                <label for="full-name" id="name" class="label text">Full Name</label>
-                <div class="validity-check">
-                    <input class="input" type="text" id="full-name" name="full-name" required>
-                    <valid-message class="valid-full-name" for="full-name"></valid-message>
-                    <error-output class="full-name-error" for="full-name"></error-output>
+            <div class="form-constrains">
+                <div class="row-content">
+                    <label for="name" class="label text">Full Name</label>
+                    <br>
+                    <input type="text" class="input" id="name" name="name" placeholder="Your name.." autocomplete="off" required>
+                    <error-output class="name-error"></error-output>
                 </div>
-            </div>
-            <div class="row-content">
-                <label for="tel" class="label text">Phone Number</label>
-                <div class="validity-check">
-                    <input class="input" type="tel" id="tel" name="tel" required>
-                    <valid-message class="valid-tel" for="tel"></valid-message>
-                    <error-output class="tel-error" for="tel"></error-output>
+                <div class="row-content">
+                    <label for="phoneNumber" class="label text">Phone Number</label>
+                    <br>
+                    <input type="tel" class="input" id="phoneNumber" name="phoneNumber" placeholder="Your phone number.." autocomplete="off" required>
+                    <error-output class="tel-error"></error-output>
                 </div>
-            </div>
-            <div class="row-content">
-                <label for="address" class="label text">Address</label>
-                <div class="validity-check">
-                    <textarea class="input text" name="address" id="address" style="height: 100px;" required></textarea>
-                    <valid-message class="valid-address" for="address"></valid-message>
-                    <error-output class="address-error" for="address"></error-output>
+                <div class="row-content">
+                    <label for="address" class="label text">Address</label>
+                    <br>
+                    <textarea name="address" id="address" placeholder="Your address.." autocomplete="off" required></textarea>
+                    <error-output class="address-error"></error-output>
                 </div>
-            </div>
-            <div class="select-elements">
-                <div name="select-city" id="select-city" class="select-div">
-                    <label for="city" class="label text">City</label>
-                    <select name="city" id="city" required>
-                      <option value="" disabled selected hidden>Select City</option>
-                      <option value="Guntur">Guntur</option>
-                      <option value="Bangalore">Bangalore</option>
-                      <option value="Hyderabad">Hyderabad</option>
-                  </select>
+                <div class="row-content">
+                    <div class="column-constrains">
+                        <div class="column-content">
+                            <label for="city" class="label text">City</label>
+                            <br>
+                            <select name="city" id="city" required>
+                  <option selected disabled hidden value="Select City">Select City</option>
+                  <option value="Bangalore">Bangalore</option>
+                  <option value="Chennai">Chennai</option>
+                  <option value="Hyderabad">Hyderabad</option>
+                  <option value="Mumbai">Mumbai</option>
+                </select>
+                        </div>
+                        <div class="column-content">
+                            <label for="state" class="label text">State</label>
+                            <br>
+                            <select name="state" id="state">
+                  <option selected disabled hidden value="Select State">Select State</option>
+                  <option value="Andhra Pradesh">Andhra Pradesh</option>
+                  <option value="Karnataka">Karnataka</option>
+                  <option value="Kerala">Kerala</option>
+                  <option value="Tamil Nadu">Tamil Nadu</option>
+                  <option value="Telangana">Telangana</option>
+                 </select>
+                        </div>
+                        <div class="column-content">
+                            <label for="zip" class="label text">Zip code</label>
+                            <br>
+                            <input type="text" class="input zipcode" id="zip" name="zip" autocomplete="off" placeholder="Your zipcode.." required>
+                            <error-output class="zip-error"></error-output>
+                        </div>
+                    </div>
                 </div>
-                <div name="select-state" id="select-state" class="select-div">
-                    <label for="state" class="label text">State</label>
-                    <select name="state" id="state" required>
-                      <option value="" disabled selected hidden>Select State</option>
-                      <option value="Telangana">Telangana</option>
-                      <option value="Karnataka">Karnataka</option>
-                      <option value="Andhra Pradesh">Andhra Pradesh</option>
-                  </select>
-                </div>
-                <div name="select-zip" id="select-zip" class="select-div ">
-                    <label for="zip" class="label text">Zip Code</label>
-                    <input type="text" name="zip" id="zip" required>
-                    <valid-message class="valid-zip" for="zip"></valid-message>
-                    <error-output class="zip-error" for="zip"></error-output>
 
-                </div>
             </div>
-
         </form>
     </div>
+    <script src="../js/address_book_form.js"></script>
+    <script src="../js/contact_data.js"></script>
 </body>
 
 </html>
