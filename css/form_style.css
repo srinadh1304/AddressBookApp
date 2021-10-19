@@ -118,17 +118,13 @@ label {
 }
 
 textarea {
-    height: 80%;
     width: 100%;
-    resize: none;
     background: #ffffff 0% 0% no-repeat padding-box;
     border: 1px solid #bdbdbd;
     border-radius: 3px;
-    letter-spacing: -1px;
     opacity: 1;
-    padding-bottom: 60px;
-    padding-left: 10px;
-    padding-top: 10px;
+    resize: horizontal;
+    padding: 16px 12px;
 }
 
 .column-constrains {
@@ -152,6 +148,7 @@ select {
     color: #42515f;
     opacity: 1;
     width: 80%;
+    margin: auto;
 }
 
 .zipcode {
