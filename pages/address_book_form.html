@@ -30,7 +30,15 @@
                 </div>
             </div>
         </form>
-    </div>
+        <div class="row-content">
+            <label for="full-name" id="name" class="label text">Full Name</label>
+            <div class="validity-check">
+                <input class="input" type="text" id="full-name" name="full-name" required>
+                <valid-message class="valid-full-name" for="full-name"></valid-message>
+                <error-output class="full-name-error" for="full-name"></error-output>
+            </div>
+        </div>
+
 </body>
 
 </html>
