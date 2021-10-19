@@ -57,45 +57,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
 
 });
-
-function save() {
-    let contact = new Contact();
-    contact.id = new Date().getTime();
-
-
-    contact.name = getInputValueById("#name");
-    contact.phoneNumber = getInputValueById("#phoneNumber");
-    contact.address = getInputValueById("#address");
-    let city = getInputValueById("#city");
-    if (city != "Select City") {
-        contact.city = city;
-    } else {
-        throw "Please select city";
-    }
-
-    let state = getInputValueById("#state");
-    if (state != "Select State") {
-        contact.state = state;
-    } else {
-        throw "Please select state";
-    }
-
-    try {
-        contact.zip = getInputValueById("#zip");
-    } catch (error) {
-        setTextValue(".zip-error", error);
-        throw error;
-    }
-
-    console.log(contact.toString());
-}
-
 const setTextValue = (id, value) => {
     const element = document.querySelector(id);
     element.textContent = value;
 };
-
-function getInputValueById(property) {
-    let value = document.querySelector(property).value;
-    return value;
-}
