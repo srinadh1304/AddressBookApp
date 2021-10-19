@@ -1,5 +1,5 @@
 const nameRegex = RegExp("^[A-Z]{1}[a-z]{2,}$");
-const phoneNumberRegex = RegExp("^[+]{0,1}[0-9]{2}\\s{1}[6-9]{1}[0-9]{9}$");
+const phoneNumberRegex = RegExp("^[+]{0,1}[0-9]{0,2}[6-9]{1}[0-9]{9}$");
 const addressRegex = RegExp('^[a-zA-Z0-9#,&.]{3,}\\s{1,}[a-zA-Z0-9#,&.]{3,}');
 const zipRegex = RegExp("^[0-9]{3}\\s{0,1}[0-9]{3}$");
 
