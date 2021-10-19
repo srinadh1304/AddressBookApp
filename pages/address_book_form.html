@@ -29,64 +29,58 @@
                     <a href="../pages/home.html"><img class="cancel-img" src="../assets/images//cross.png/cross.png" alt=""></a>
                 </div>
             </div>
-        </form>
-        <div class="row-content">
-            <label for="full-name" id="name" class="label text">Full Name</label>
-            <div class="validity-check">
-                <input class="input" type="text" id="full-name" name="full-name" required>
-                <valid-message class="valid-full-name" for="full-name"></valid-message>
-                <error-output class="full-name-error" for="full-name"></error-output>
+            <div class="row-content">
+                <label for="full-name" id="name" class="label text">Full Name</label>
+                <div class="validity-check">
+                    <input class="input" type="text" id="full-name" name="full-name" required>
+                    <valid-message class="valid-full-name" for="full-name"></valid-message>
+                    <error-output class="full-name-error" for="full-name"></error-output>
+                </div>
             </div>
-        </div>
-        <div class="row-content">
-            <label for="tel" class="label text">Phone Number</label>
-            <div class="validity-check">
-                <input class="input" type="tel" id="tel" name="tel" required>
-                <valid-message class="valid-tel" for="tel"></valid-message>
-                <error-output class="tel-error" for="tel"></error-output>
+            <div class="row-content">
+                <label for="tel" class="label text">Phone Number</label>
+                <div class="validity-check">
+                    <input class="input" type="tel" id="tel" name="tel" required>
+                    <valid-message class="valid-tel" for="tel"></valid-message>
+                    <error-output class="tel-error" for="tel"></error-output>
+                </div>
             </div>
-        </div>
-        <div class="row-content">
-            <label for="address" class="label text">Address</label>
-            <div class="validity-check">
-                <textarea class="input text" name="address" id="address" style="height: 100px;" required></textarea>
-                <valid-message class="valid-address" for="address"></valid-message>
-                <error-output class="address-error" for="address"></error-output>
+            <div class="row-content">
+                <label for="address" class="label text">Address</label>
+                <div class="validity-check">
+                    <textarea class="input text" name="address" id="address" style="height: 100px;" required></textarea>
+                    <valid-message class="valid-address" for="address"></valid-message>
+                    <error-output class="address-error" for="address"></error-output>
+                </div>
             </div>
-        </div>
-        <div class="select-elements">
-            <div name="select-city" id="select-city" class="select-div">
-                <label for="city" class="label text">City</label>
-                <select name="city" id="city" required>
-                  <option value="" disabled selected hidden>Select City</option>
-                  <option value="Guntur">Guntur</option>
-                  <option value="Bangalore">Bangalore</option>
-                  <option value="Hyderabad">Hyderabad</option>
-              </select>
-            </div>
-            <div name="select-state" id="select-state" class="select-div">
-                <label for="state" class="label text">State</label>
-                <select name="state" id="state" required>
-                  <option value="" disabled selected hidden>Select State</option>
-                  <option value="Telangana">Telangana</option>
-                  <option value="Karnataka">Karnataka</option>
-                  <option value="Andhra Pradesh">Andhra Pradesh</option>
-              </select>
-            </div>
-            <div name="select-zip" id="select-zip" class="select-div ">
-                <label for="zip" class="label text">Zip Code</label>
-                <input type="text" name="zip" id="zip" required>
-                <valid-message class="valid-zip" for="zip"></valid-message>
-                <error-output class="zip-error" for="zip"></error-output>
+            <div class="select-elements">
+                <div name="select-city" id="select-city" class="select-div">
+                    <label for="city" class="label text">City</label>
+                    <select name="city" id="city" required>
+                      <option value="" disabled selected hidden>Select City</option>
+                      <option value="Guntur">Guntur</option>
+                      <option value="Bangalore">Bangalore</option>
+                      <option value="Hyderabad">Hyderabad</option>
+                  </select>
+                </div>
+                <div name="select-state" id="select-state" class="select-div">
+                    <label for="state" class="label text">State</label>
+                    <select name="state" id="state" required>
+                      <option value="" disabled selected hidden>Select State</option>
+                      <option value="Telangana">Telangana</option>
+                      <option value="Karnataka">Karnataka</option>
+                      <option value="Andhra Pradesh">Andhra Pradesh</option>
+                  </select>
+                </div>
+                <div name="select-zip" id="select-zip" class="select-div ">
+                    <label for="zip" class="label text">Zip Code</label>
+                    <input type="text" name="zip" id="zip" required>
+                    <valid-message class="valid-zip" for="zip"></valid-message>
+                    <error-output class="zip-error" for="zip"></error-output>
 
+                </div>
             </div>
-        </div>
-        <div class="buttonParent">
-            <div class="submit-reset">
-                <button type="submit" class="button submitButton">Add</button>
-                <button type="reset" class="resetButton button">Reset</button>
-            </div>
-        </div>
+
         </form>
     </div>
 </body>
