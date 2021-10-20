@@ -74,6 +74,7 @@ const save = (event) => {
     try {
         setAddressBookContactJSONObject();
         UpdateLocalStorage();
+        open("../pages/address_book_home.html")
     } catch (submitError) {
         alert(submitError);
         return;
@@ -174,8 +175,6 @@ const setValue = (propertyId, value) => {
     const element = document.querySelector(propertyId);
     element.value = value;
 };
-
-
 
 const setSelectedIndex = (propertyId, index) => {
     const element = document.querySelector(propertyId);
