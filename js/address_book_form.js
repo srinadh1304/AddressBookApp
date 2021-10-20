@@ -67,16 +67,47 @@ window.addEventListener("DOMContentLoaded", (event) => {
 });
 
 const save = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
     try {
-        setAddressBookContactJSONObject();
-        UpdateLocalStorage();
-        resetForm();
-        open("../pages/home.html");
-    } catch (submitError) {
-        alert(submitError);
+        setContactObject();
+        if (site_properties.use_local_storage.match("true")) {
+            createAndUpdateStorage();
+            resetForm();
+            window.location.replace(site_properties.home_page);
+        } else {
+            createOrUpdateContactData();
+        }
+    } catch (e) {
+        console.log(e);
         return;
     }
+    // try {
+    //     setAddressBookContactJSONObject();
+    //     UpdateLocalStorage();
+    //     resetForm();
+    //     open("../pages/home.html");
+    // } catch (submitError) {
+    //     alert(submitError);
+    //     return;
+    // }
 };
+const createOrUpdateContactData = () => {
+    let postUrl = site_properties.server_url;
+    let methodCall = "POST";
+    if (isUpdate) {
+        methodCall = "PUT";
+        postUrl = postUrl + contactObj.id.toString();
+    }
+    makeServiceCall(methodCall, postUrl, true, contactObj)
+        .then(responseText => {
+            resetForm();
+            window.location.replace(site_properties.home_page);
+        })
+        .catch(error => {
+            throw error;
+        });
+}
 
 const UpdateLocalStorage = () => {
     let addressBookList = JSON.parse(localStorage.getItem("AddressBookList"));
@@ -96,6 +127,7 @@ const UpdateLocalStorage = () => {
 }
 
 const setAddressBookContactJSONObject = () => {
+    if (!isUpdate) contactObj.id = createNewContactId();
     addressBookContactJSONObject._name = getValue('#name');
     addressBookContactJSONObject._address = getValue('#address');
     addressBookContactJSONObject._phoneNumber = getValue('#phoneNumber');
