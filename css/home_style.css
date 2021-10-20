@@ -181,3 +181,7 @@ td {
 img {
     margin-right: 10px;
 }
+
+td img {
+    cursor: pointer;
+}
