@@ -10,7 +10,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
             return;
         }
         try {
-            new Contact().name = name.value;
+            checkName(name.value);
             setTextValue(".name-error", "");
         } catch (error) {
             setTextValue(".name-error", error);
@@ -26,7 +26,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
             return;
         }
         try {
-            new Contact().phoneNumber = phoneNumber.value;
+            checkPhone(phone.value);
             setTextValue(".tel-error", "");
         } catch (error) {
             setTextValue(".tel-error", error);
@@ -40,7 +40,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
             return;
         }
         try {
-            new Contact().address = address.value;
+            checkAddress(address.value);
             setTextValue(".address-error", "");
         } catch (error) {
             setTextValue(".address-error", error);
@@ -56,7 +56,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
             return;
         }
         try {
-            new Contact().zip = zip.value;
+            checkZip(zip.value);
             setTextValue(".zip-error", "");
         } catch (error) {
             setTextValue(".zip-error", error);
