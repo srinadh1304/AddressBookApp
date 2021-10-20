@@ -1,4 +1,4 @@
-html body {
+    html body {
     margin: 0;
     height: 100%;
     background-color: #F7F7F7;
@@ -58,6 +58,10 @@ html body {
     text-transform: capitalize;
 }
 
+.person-payroll {
+    color: #42515f;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -107,8 +111,6 @@ html body {
     background: #008CFF 0% 0% no-repeat padding-box;
     border: none;
     border-radius: 5px;
-    padding: 5px 18px;
     outline: none;
     cursor: pointer;
     text-decoration: none;
-}
