@@ -1,0 +1,30 @@
+{
+    "ContactDB": [{
+            "id": "1",
+            "_name": "Srinadh",
+            "_address": "Vool",
+            "_phoneNumber": "+9290090032",
+            "_city": "Bengaluru",
+            "_state": "Karnataka",
+            "_zipcode": "665676"
+        },
+        {
+            "id": "6",
+            "_name": "Chandra",
+            "_address": "pebble street tth",
+            "_phoneNumber": "+8463934331",
+            "_city": "Bengaluru",
+            "_state": "Karnataka",
+            "_zipcode": "787878"
+        },
+        {
+            "_name": "Pushpa",
+            "_address": "MG",
+            "_phoneNumber": "+919898669898",
+            "_city": "Mumbai",
+            "_state": "Maharashtra",
+            "_zipcode": "788787",
+            "id": "5"
+        }
+    ]
+}
