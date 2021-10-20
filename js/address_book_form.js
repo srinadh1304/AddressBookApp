@@ -26,7 +26,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
             return;
         }
         try {
-            checkPhone(phone.value);
+            checkPhone(phoneNumber.value);
             setTextValue(".tel-error", "");
         } catch (error) {
             setTextValue(".tel-error", error);
@@ -81,12 +81,12 @@ const save = (event) => {
 const UpdateLocalStorage = () => {
     let addressBookList = JSON.parse(localStorage.getItem("AddressBookList"));
     if (addressBookList) {
-        let contactData = addressBookList.find(contact => contact._id == addressBookContactJSONObject._id);
+        let contactData = addressBookList.find(contact => contact.id == addressBookContactJSONObject.id);
         if (!contactData) {
             addressBookList.push(createAddressBookContactData());
         } else {
-            const index = addressBookList.map(contact => contact._id).indexOf(contactData._id);
-            addressBookList.splice(index, 1, createAddressBookContactData(contactData._id));
+            const index = addressBookList.map(contact => contact.id).indexOf(contactData.id);
+            addressBookList.splice(index, 1, createAddressBookContactData(contactData.id));
         }
     } else {
         addressBookList = [createAddressBookContactData()];

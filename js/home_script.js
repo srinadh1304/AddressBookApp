@@ -31,8 +31,8 @@ const createInnerHtml = () => {
             <td>${contactData._zip}</td>
             <td>${contactData._phoneNumber}</td>
             <td>
-                <img id="${contactData._id}" onclick="remove(this)" alt="delete" src="../assets/delete-black-18dp.svg">
-                <img id="${contactData._id}" onclick="update(this)" alt="edit" src="../assets/create-black-18dp.svg">
+                <img id="${contactData.id}" onclick="remove(this)" alt="delete" src="../assets/delete-black-18dp.svg">
+                <img id="${contactData.id}" onclick="update(this)" alt="edit" src="../assets/create-black-18dp.svg">
             </td>
         </tr>
         `;
@@ -40,9 +40,9 @@ const createInnerHtml = () => {
     document.querySelector("#table-display").innerHTML = innerHtml;
 };
 const remove = (node) => {
-    let contactData = addressBookContactList.find(contact => contact._id == node.id);
+    let contactData = addressBookContactList.find(contact => contact.id == node.id);
     if (!contactData) return;
-    const index = addressBookContactList.map(contact => contact._id).indexOf(contactData._id);
+    const index = addressBookContactList.map(contact => contact.id).indexOf(contactData.id);
     addressBookContactList.splice(index, 1);
     localStorage.setItem("AddressBookList", JSON.stringify(addressBookContactList));
     document.querySelector(".person-count").textContent = addressBookContactList.length;
@@ -50,7 +50,7 @@ const remove = (node) => {
 };
 
 const update = (node) => {
-    let contactData = addressBookContactList.find(contact => contact._id == node.id);
+    let contactData = addressBookContactList.find(contact => contact.id == node.id);
     if (!contactData) return;
     localStorage.setItem("PersonToEdit", JSON.stringify(contactData));
     window.location.replace(site_properties.address_book_form_page);
